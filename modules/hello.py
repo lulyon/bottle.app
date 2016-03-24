@@ -16,7 +16,7 @@ class Hello():
         self.memcached_expire_table = app.settings['memcached_expire_table']
             
     # jsonp api
-    def forumdisplay(self):
+    def display(self):
         c = bottle.request.params.get('callback', None)
         p = bottle.request.params.get('p', 0)
         params = dict()
