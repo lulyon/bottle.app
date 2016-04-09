@@ -36,9 +36,9 @@ if DEPLOYMENT==DeploymentType.PRODUCTION:
     settings["db_cfg"] = {
         "dbhost":"127.0.0.1",
         "dbport": 3306,
-        "dbuser":"root",
-        "dbpass":"123456",
-        "dbname":"tgpforum",
+        "dbuser":"user",
+        "dbpass":"pass",
+        "dbname":"db",
         "socket": '/data/mysqldb/mysql.sock',
         "dbchar":"utf8"
                         }
@@ -49,9 +49,9 @@ else:
     settings["db_cfg"] = {
         "dbhost":"127.0.0.1",
         "dbport": 3306,
-        "dbuser":"root",
-        "dbpass":"123456",
-        "dbname":"tgpforum",
+        "dbuser":"user",
+        "dbpass":"pass",
+        "dbname":"db",
         "socket": 'F:\\srv\\mysql-5.5.28-winx64\\data\\mysql.sock',
         "dbchar":"utf8"
                         }
@@ -70,29 +70,6 @@ settings["key_network_in"] = "d!#@]e$VSshW%an^g["       #response
 settings['memcached_address'] = ["127.0.0.1:11211"]
 
 settings['memcached_expire_table'] = {
-    "forumdisplay:userinfo" : 60 * 1,
-    "forumdisplay:tidatag" : 60 * 1,
-    
-    "forumdisplay_good:userinfo" : 60 * 1,
-    "forumdisplay_good:tidatag" : 60 * 1,
-    
-    "forumthread_detail:usergameinfo" : 60 * 1,
-    
-    "comment_list:userinfo" : 60 * 1,
-    
-    "tagthreadlist:userinfo" : 60 * 1,
-    "tagthreadlist:tidatag" : 60 * 1,
-    
-    "forumdisplay_attitude:userinfo" : 60 * 1,
-    "forumdisplay_attitude:tidatag" : 60 * 1,
-    
-    "taglist" : 60 * 1,
-    "tagthreadlist" : 60 * 1,
-    "threadlist" : 60 * 1,
-    "threadlist_good" : 60 * 1,
-    "viewthread" : 60,
-    "comment_list" : 60 * 1,
-    "tgpforumadlist" : 60 * 1,
 }
 
 #临时目录
@@ -105,5 +82,5 @@ settings["ugc"] = UGC_PATH
 #settings['log_level'] = options.log
 settings['logging_config'] = { "log_level":logging.INFO, \
                              "log_format":"%(asctime)s %(levelname)s [%(lineno)04d] >>>> %(message)s", \
-                             "log_name":"tgpforum",  \
+                             "log_name":"log",  \
                              "log_path":LOG_PATH}
