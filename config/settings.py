@@ -30,7 +30,7 @@ else:
     DEPLOYMENT = DeploymentType.DEV
 
 settings = {}
-# 以下配置项目根据运行环境的不同灵活配置
+# DEBUG or PRODUTION
 if DEPLOYMENT==DeploymentType.PRODUCTION:
     settings["debug"] = False
     settings["db_cfg"] = {
