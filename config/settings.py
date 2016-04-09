@@ -57,24 +57,15 @@ else:
                         }
     settings["im_cfg"] = {}
 
-
-# 以下参数为应用的系统级参数， 禁止修改
 settings['static_path'] = MEDIA_ROOT
-settings['cookie_secret'] = "481da2252edca50d9f4cc8a01b40ac61meetingadmin"
-settings['xsrf_cookies'] = True
-settings['domain'] = 'http://127.0.0.1:5000'
-#请求、响应参数加密密钥
-settings["key_network_out"] = "d]e$123sh$1123%an^g["    #request
-settings["key_network_in"] = "d!#@]e$VSshW%an^g["       #response
+
 #memcached settings
 settings['memcached_address'] = ["127.0.0.1:11211"]
 
 settings['memcached_expire_table'] = {
 }
 
-#临时目录
 settings['temp_dir'] = TEMP_ROOT
-#ugc目录
 settings["ugc"] = UGC_PATH
 
 #logging
