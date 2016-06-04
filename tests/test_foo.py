@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# 想要不捕获输出， 可以在命令行下采用nosetests -s 命令来执行，基础的setup,steardown和classruli如例
+# unittest example
 
 def setUp():
     print "function setup"

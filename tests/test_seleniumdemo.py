@@ -9,6 +9,8 @@ import unittest, time, re
 
 import urllib
 
+# selenium demo
+
 def my_urlencode(str) :
     reprStr = repr(str).replace(r'\x', '%')
     return reprStr[1:-1]

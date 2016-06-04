@@ -11,7 +11,7 @@ from sys import argv
 from subprocess import call
 from datetime import datetime
 
-# 注册libs及libs/vendor目录到importpath中
+# register libs and libs/vendor directory to importpath
 import libs.environment
 current_time = lambda: str(datetime.now()).split(' ')[1].split('.')[0]
 

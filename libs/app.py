@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 应用基础类
 """
@@ -84,7 +84,7 @@ class Application(Bottle):
             s = os.path.sep.join(pathinfo.rstrip('/').lstrip('/').split('/'))
             s = os.path.sep.join((os.getcwd(), 'statics', s))
             # print('=> %s '%s)
-            # 如果该文件存在，直接路由该文件为静态文件
+            # file resource route
             if os.path.exists(s):
                 self.route(path=pathinfo, method='GET', callback=self.serve_static2, name='static_get')
 
@@ -106,7 +106,7 @@ class Application(Bottle):
             import os
 
             self.logger = logging.getLogger("%s.%s" % (self.settings["logging_config"]["log_name"], time.time()))
-            # 类似nginx日志，按时间每天一个文件，其他回滚另议
+            # log seperated by day
             file_path = os.path.realpath("%s/%s-%s.log" % (self.settings["logging_config"]["log_path"], self.settings["logging_config"]["log_name"], time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime())))
             # print file_path
             file_handler = logging.handlers.TimedRotatingFileHandler(file_path,when='D',interval=1, backupCount=31)

@@ -3,7 +3,7 @@ import re
 def Html2UBB(content):
     # print content
     
-    #以下是将html标签转为ubb标签
+    # convert html tag to UBB tag
     content = content.replace('\r\n', '')
     content = content.replace('\n', '')
     content = content.replace('\t', '')

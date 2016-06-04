@@ -4,6 +4,8 @@ import unittest
 import memcache
 import time
 
+# unit test for memcached
+
 class MyTestCase(unittest.TestCase):
     def test_something(self):
         # self.session_manager = SessionManager(settings["session_secret"], settings["memcached_address"], settings["session_timeout"])
@@ -14,10 +16,10 @@ class MyTestCase(unittest.TestCase):
         time.sleep(4)
         v1 = mc.get('test_key1')
         v2 = mc.get('test_key2')
-        # 超时后， get得到的值为None
+        # if timeout， get None value
         self.assertIsNone(v2)
         self.assertEquals(v1, 'value1')
-        # 删除后， 值为Nonoe
+        # if delete, get None value
         mc.delete('test_key1')
         v1 = mc.get('test_key1')
         self.assertIsNone(v1)

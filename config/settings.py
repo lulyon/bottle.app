@@ -52,7 +52,7 @@ else:
         "dbuser":"user",
         "dbpass":"pass",
         "dbname":"db",
-        "socket": 'F:\\srv\\mysql-5.5.28-winx64\\data\\mysql.sock',
+        "socket": 'F:\\data\\mysql.sock',
         "dbchar":"utf8"
                         }
     settings["im_cfg"] = {}

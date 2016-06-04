@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#  modules 目录下实现业务逻辑处理（controller）和存储层数据获取（model）
+#  example file under modules directory, implement web backend logic（controller）
 
 import bottle
 import time
