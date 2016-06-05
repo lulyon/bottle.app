@@ -16,5 +16,8 @@ pycurl2 (7.20.0)
 unittest2 (0.5.1)
 virtualenv (1.11.6)
 mockito (0.5.2)
+gevent(1.1)
+bottle(0.12 stable)
+
 
 

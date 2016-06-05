@@ -8,7 +8,7 @@ from MySQLdb.cursors import DictCursor
 from DBUtils.PooledDB import PooledDB
 
 """
-Config是一些数据库的配置文件
+Config: DB configuration file
 """
 
 class Mysql(object):

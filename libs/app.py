@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-应用基础类
+app framework
 """
 # bottle framework
 from bottle import Bottle
@@ -74,7 +74,7 @@ class Application(Bottle):
         self.__uri_param = {}
 
     '''
-    before request hook中处理静态文件请求
+    before request hook: handle static file request
     '''
     def hook_before_request(self):
         if bottle.request.environ['PATH_INFO'] == '/error':
