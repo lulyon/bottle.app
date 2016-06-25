@@ -8,7 +8,7 @@ bottle.app is an instantly available web app server written in Python based on [
 to be continued
 
 ### Http Protocol Parser
-Based on `Bottle.request`, it is very convenient to handle incoming http request by Parsing and wrap parameters, and provide parameters abstraction (uri parameters or get/post data) for the request handling modules(main logic part for web project), which is integrated in the framework so that no extra code needs written for http protocol parsing. 
+Based on `Bottle.request`, it is very convenient to handle incoming http request by parsing and wrapping parameters, and provide parameters abstraction (uri parameters or get/post data) for the request handling modules(main logic part for web project). It is integrated in the framework so that no extra code needs written for http protocol parsing. 
 
 ### Request routing and handling
 
