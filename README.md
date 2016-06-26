@@ -11,6 +11,7 @@ to be continued
 Based on `Bottle.request`, it is very convenient to handle incoming http request by parsing and wrapping parameters, and provide parameters abstraction (uri parameters or get/post data) for the request handling modules(main logic part for web project). It is integrated in the framework so that no extra code needs written for http protocol parsing. 
 
 ### Request routing and handling
+The framework class `Bottle` makes a comprehensive abstraction of Request routing. By hooking handler function of the `Bottle` class, it is very extensiable to customize Request routing policy.
 
 ### Storage Access Wrapper
 
