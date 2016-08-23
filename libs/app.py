@@ -44,7 +44,7 @@ class Application(Bottle):
 
         reload(sys)
         sys.setdefaultencoding('utf8')
-        ssl._create_default_https_context = ssl._create_unverified_context
+        # ssl._create_default_https_context = ssl._create_unverified_context
 
         if not self.init_logger():
             print "failed to init logger,please check whether the logger info configured in config.py"
@@ -53,7 +53,7 @@ class Application(Bottle):
             self.logger.info("logger init succeed.")
 
         import urllib3
-        urllib3.disable_warnings()
+        # urllib3.disable_warnings()
         self.http_pool = urllib3.PoolManager(5, maxsize=5000, block=True)
         
         from dbutil import Mysql

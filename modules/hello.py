@@ -17,19 +17,19 @@ class Hello():
             
     # jsonp api
     def display(self):
-        c = bottle.request.params.get('callback', None)
-        p = bottle.request.params.get('p', 0)
-        params = dict()
-        if p:
-            params = self.app.json_decode(p)
+        # c = bottle.request.params.get('callback', None)
+        #p = bottle.request.params.get('p', 0)
+        #params = dict()
+        #if p:
+        #    params = self.app.json_decode(p)
             
-        req = params['req'] if params.has_key('req') else ''
+        #req = params['req'] if params.has_key('req') else ''
         # handle request message
-        rs = func(req)
-        res = dict()
+        # rs = func(req)
+        rs = dict()
         if not rs:
             res = self.app.return_data(-2, "no data", {})
         else:
             res = self.app.return_data(1, "succ", rs)
-        return self.app.json_encode(res, c)
+        return self.app.json_encode(res, None)
 
